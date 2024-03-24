@@ -45,3 +45,4 @@ src/test/
 
 # IntelliJ stuff
 .idea/
+*.iml

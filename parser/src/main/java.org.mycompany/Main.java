@@ -1,8 +1,10 @@
+import java.io.IOException;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+import org.mycompany.*;
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
 
     // create a CharStream that reads from standard input
     ANTLRInputStream input = new ANTLRInputStream(System.in);
