@@ -1,5 +1,3 @@
-package com.mycompany.app.planner;
-
 import com.mycompany.app.common.types.Type;
 
 /**

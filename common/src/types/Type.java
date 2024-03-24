@@ -1,4 +1,4 @@
-package com.mycompany.app.common.types;
+package types;
 
 /**
  * Types must map

@@ -39,8 +39,8 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
-src/main.java.com.mycompany.app/java/ConnectionVariables.java
-src/main.java.com.mycompany.app/resources/
+main/src/main.java.com.mycompany.app/java/ConnectionVariables.java
+main/src/main.java.com.mycompany.app/resources/
 src/test/
 
 # IntelliJ stuff
