@@ -1,0 +1,1 @@
+Common resources for other packages. To prevent circular dependencies, avoid adding dependencies on other packages to common.
