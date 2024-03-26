@@ -5,27 +5,7 @@ myGrammar
   ;
 
 statement
-    : create
-    | insert
-    | delete
-    | select
-    | selectfromtable
-    ;
-
-create
-    : CREATE FILE fileIdentifier columnNames
-    ;
-
-insert
-    : INSERT INTO FILE fileIdentifier columnNames ROWS values (COMMA values)*
-    ;
-
-delete
-    : DELETE FILE fileIdentifier
-    ;
-
-select
-    : SELECT expressionList FROM FILE fileIdentifier (WHERE booleanExpression)?
+    : selectfromtable
     ;
 
 selectfromtable
@@ -74,25 +54,14 @@ constant
     | QUOTED_STRING+
     ;
 
-fileIdentifier
-    : name=identifier
-    ;
-
 tableIdentifier
     : name=identifier
     ;
 
-CREATE : 'CREATE' | 'create';
 SELECT: 'SELECT' | 'select';
 FROM: 'FROM' | 'from';
-FILE: 'FILE' | 'file';
-INSERT : 'INSERT' | 'insert';
-INTO : 'INTO' | 'into';
 ROWS : 'ROWS' | 'rows';
-UPDATE : 'UPDATE' | 'update';
-SET : 'SET' | 'set';
 WHERE : 'WHERE' | 'where';
-DELETE : 'DELETE' | 'delete';
 NULL : 'NULL' | 'null';
 
 
