@@ -1,4 +1,7 @@
+package main.java.org.mycompany;
+
 import java.io.IOException;
+import java.util.function.Predicate;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 import org.mycompany.*;
@@ -184,7 +187,7 @@ public class Main {
 
     // This works in lexer/parser, but not lexer/parser{2} (presto grammar). Cookie for who
     // figures out why.
-    String inputString = "SELECT col1, col2, 'foo' FROM tbl;";
+    String inputString = "SELECT col1, col2, tbl2.col3, 'foo' FROM tbl;";
 
     // create a CharStream that reads from standard input
     ANTLRInputStream input = new ANTLRInputStream(inputString);
