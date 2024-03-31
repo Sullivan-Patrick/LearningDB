@@ -86,6 +86,7 @@ public class Main {
     @Override
     public void enterExpressionList(ExpressionListContext ctx) {
     }
+
     @Override
     public void exitExpressionList(ExpressionListContext ctx) {
 
@@ -122,7 +123,7 @@ public class Main {
 
     @Override
     public void enterIdentifier(IdentifierContext ctx) {
-      int size =  ctx.IDENTIFIER().size();
+      int size = ctx.IDENTIFIER().size();
       if (size == 2) {
         // Qualified with table name
       } else if (size == 1) {
@@ -183,6 +184,7 @@ public class Main {
 
     }
   }
+
   public static void main(String[] args) throws IOException {
 
     // This works in lexer/parser, but not lexer/parser{2} (presto grammar). Cookie for who
@@ -192,11 +194,11 @@ public class Main {
     // create a CharStream that reads from standard input
     ANTLRInputStream input = new ANTLRInputStream(inputString);
 
-        // create a lexer that feeds off of input CharStream
+    // create a lexer that feeds off of input CharStream
     SqlGrammarLexer lexer = new SqlGrammarLexer(input);
 
     // create a buffer of tokens pulled from the lexer
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
+    CommonTokenStream tokens = new CommonTokenStream(lexer);
 
     // create a parser that feeds off the tokens buffer
     SqlGrammarParser parser = new SqlGrammarParser(tokens);
@@ -208,7 +210,7 @@ public class Main {
     SqlGrammarListener listener = new MyListener();
     walker.walk(listener, tree);
 
-        System.out.println(tree.toStringTree(parser)); // print LISP-style tree
+    System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 
   }
 }
