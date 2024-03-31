@@ -8,4 +8,3 @@ public enum Type {
     VARCHAR,
     BOOL
 }
-
